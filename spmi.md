@@ -266,7 +266,7 @@ $gp(28),为global pointer，可以直接访问中间64k的内存块(最大的偏
 
 $sp(29),为stack pointer，指向栈空间的最后一个位置。$fp(30),是fram pointer，指向帧（栈）区域的第一个内存地址，由于栈空间是向下扩展的，即从高地址位到低地址位，所以$fp一般大于$sp。`jal`指令保存当前指令的下一行指令的位置到$ra(31),$ra=PC+4，使得调用完成后将返回到此地址。
 
-![image-20211105143050335](/Users/wuff/r1cs/image-registers.png)
+![image-20211105143050335](image-registers.png)
 
 -----------
 
@@ -430,11 +430,11 @@ int main()
 
 以上7个coprocessor的寄存器可通过`mfc0`和`mtc0`指令获得。
 
-![image-20211105181952183](/Users/wuff/r1cs/status_interrupt_mask.png)
+![image-20211105181952183](status_interrupt_mask.png)
 
 
 
-![image-20211105182119718](/Users/wuff/r1cs/cause_register.png)
+![image-20211105182119718](cause_register.png)
 
 而exception code register描述了异常的原因：
 
